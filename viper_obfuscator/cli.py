@@ -1,5 +1,4 @@
 #cli script
-from colorama import init ,Fore , Style
 import marshal , os , base64
 
 os.system("")
