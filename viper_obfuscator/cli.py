@@ -86,6 +86,8 @@ while True:
         print(os.getcwd())
     if cmd =='manualpath':
         mlanualpath()
+    if cmd =='exit':
+        break
 
 
 
