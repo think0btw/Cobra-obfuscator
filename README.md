@@ -1,3 +1,3 @@
-<h1 align="center">viper-obfuscator 🐍</h1>
+<h1 align="center">Cobra-obfuscator 🐍</h1>
 
 ## Preview
