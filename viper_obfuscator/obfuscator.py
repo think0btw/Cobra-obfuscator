@@ -1,20 +1,13 @@
 #obfuscator
-import marshal ,os
+import marshal ,base64 ,os
 
-path=""
+def obfuscate(PATH):
+    with open(PATH,"r",encoding="utf-8") as f:
+        source = f.read()
+    
 
-def GetPATH():
-    global path
-    UseDropFile = input("Do you want to use drop file ? y for yes : ")
-    if (UseDropFile == "y") :
-        os.startfile(os.getcwd())
-        path = input("Drag and drop here : ").strip('"')
-        print(path)
-    else :
-        path = input("Enter a valid .py PATH : ")
-
-    if path.endswith('.py'):
-        return path
-    else :
-        print("This PATH isn't valid")
-        GetPATH()
+def cimpilefiles(PATH):
+    with open(PATH,"r",encoding="utf-8") as f:
+        source = f.read()
+    code = compile(source,PATH,'exec')
+    return code
