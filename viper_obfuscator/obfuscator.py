@@ -5,8 +5,7 @@ def obfuscate(PATH):
     with open(PATH,"r",encoding="utf-8") as f:
         source = f.read()
     
-
-def cimpilefiles(PATH):
+def compilefile(PATH):
     with open(PATH,"r",encoding="utf-8") as f:
         source = f.read()
     code = compile(source,PATH,'exec')
