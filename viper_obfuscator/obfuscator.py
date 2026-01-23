@@ -8,7 +8,7 @@ def GetPATH():
     UseDropFile = input("Do you want to use drop file ? y for yes : ")
     if (UseDropFile == "y") :
         os.startfile(os.getcwd())
-        path = input("Glisse un fichier ici : ").strip('"')
+        path = input("Drag and drop here : ").strip('"')
         print(path)
     else :
         path = input("Enter a valid .py PATH : ")
