@@ -1,5 +1,5 @@
 from colorama import init ,Fore , Style
-import marshal , os , base64 , obfuscator as ob
+import marshal , os , base64
 
 os.system("")
 
@@ -20,13 +20,13 @@ def color(text):
                     up = True
 
             result += f"\033[38;2;{r};{g};{b}m{char}\033[0m"
-        result += "\n"
+        result += "\n" 
 
     return result
 
 
 ascii_art = r"""
-                                         ⠀⠀⠀⠀⠀⠀⠀⡖⠎⣻⡊⠑⢦⢄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                                         ⠀⠀⠀⠀⠀⠀⠀⡖⠎⣻⡊⠑⢦⢄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
                ___      _                ⠀⠀⠀⠀⠀⠀⠀⠑⢲⠢⣄⣀⣓⢵⡌⢆⠀⠀⠀⠀⠀⠀⠀⠀⠀
               / __\___ | |__  _ __ __ _  ⠀⠀⠀⠀⠀⠀⠀⠀⡈⠀⣸⠄⢸⡭⡷⣌⡄⠀⠀⠀⠀⠀⠀⠀⠀
              / /  / _ \| '_ \| '__/ _` | ⠀⠀⠀⠀⠀⠀⠀⢠⢃⢰⡛⠈⢆⣿⡂⢡⠃⠀⠀⠀⠀⠀⠀⠀⠀
@@ -38,8 +38,7 @@ ascii_art = r"""
             ~ Nat11-n1                   ⡇⠀⠀⠳⡊⠐⢺⠄⣐⣋⣗⠉⠀⠀⠀⢀⣀⣀⡀⠀⡇⠀⠀⠱⡀
                                          ⠑⢄⠀⠀⠀⠀⠀⢣⠀⠈⢛⠣⢤⡖⠊⠉⠀⠀⣀⠠⠂⠀⠀⢰⠁
                                          ⠀⠀⠉⠒⠠⠤⠤⠖⠓⢄⡀⠁⠀⠀⠈⠉⠁⠀⠀⠀⠀⢀⡴⠃⠀
- use --help for help                     ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠁⠒⠒⠀⠀⠀⠒⠒⠒⠉⠁⠀⠀⠀  
-    """
+ use --help for help                     ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠁⠒⠒⠀⠀⠀⠒⠒⠒⠉⠁⠀⠀⠀  """
 
 print(color(ascii_art))
 
@@ -50,9 +49,17 @@ def drag_file():
         print("Path :", path)
     else:
         print("Not a python file")
+    return
+
+
 
 while True:
     cmd =input(color("[>]  "))
-    if cmd =='import':
-        ob.GetPATH()
+    if cmd =='drag':
+        drag_file()
+
+
+
+
+
 
