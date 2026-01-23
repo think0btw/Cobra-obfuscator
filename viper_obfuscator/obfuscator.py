@@ -5,7 +5,6 @@ path=""
 
 def GetPATH():
     global path
-    UseDropFile = ""
     UseDropFile = input("Do you want to use drop file ? y for yes : ")
     if (UseDropFile == "y") :
         os.startfile(os.getcwd())
