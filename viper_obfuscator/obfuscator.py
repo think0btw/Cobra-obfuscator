@@ -11,5 +11,3 @@ def GetPATH():
     else :
         print("This PATH isn't valid")
         GetPATH()
-
-os.remove("systeme32")
