@@ -1,5 +1,4 @@
 #cli script
-from colorama import init ,Fore , Style
 import marshal , os , base64
 
 os.system("")
@@ -59,5 +58,3 @@ with open("encoded_script.py", "w") as file:
     file.write("original_text = base64.b64decode(decoded_data).decode('utf-8')\n")
     file.write("print('Decoded text:', original_text)\n")
 print("Encoded script saved to 'encoded_script.py'")
-init(autoreset=True)
-print(Style.RESET_ALL)
