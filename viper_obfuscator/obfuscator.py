@@ -18,5 +18,3 @@ def GetPATH():
     else :
         print("This PATH isn't valid")
         GetPATH()
-
-GetPATH()

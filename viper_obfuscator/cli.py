@@ -1,5 +1,5 @@
 from colorama import init ,Fore , Style
-import marshal , os , base64
+import marshal , os , base64 , obfuscator as ob
 
 os.system("")
 
@@ -53,6 +53,6 @@ def drag_file():
 
 while True:
     cmd =input(color("[>]  "))
-    if cmd =='drag':
-        drag_file()
+    if cmd =='import':
+        ob.GetPATH()
 
