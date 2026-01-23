@@ -1,5 +1,5 @@
 #obfuscator
-import marshal , platform , os
+import marshal ,os
 
 path=""
 
