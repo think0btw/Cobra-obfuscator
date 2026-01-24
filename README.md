@@ -1,7 +1,9 @@
 <h1 align="center">Cobra-obfuscator 🐍</h1>
 
 ## Preview
-<img width="568" height="328" alt="2026-01-24_12-29" src="https://github.com/user-attachments/assets/4e51cb0f-4903-49c1-b3c7-41457c967682" />
+<p align="center">
+  <img width="568" height="328" alt="2026-01-24_12-29" src="https://github.com/user-attachments/assets/4e51cb0f-4903-49c1-b3c7-41457c967682" />
+</p>
 
 ![License](https://img.shields.io/badge/license-MIT-green?logo=open-source-initiative&logoColor=white)
 ![Python](https://img.shields.io/badge/python-3.8%2B-3776AB?logo=python&logoColor=white)
