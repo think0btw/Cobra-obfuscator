@@ -1,5 +1,5 @@
 #obfuscator
-import base64 ,os ,xor
+import base64 ,os
 
 def obfuscate(PATH):
     with open(PATH,"r",encoding="utf-8") as f:
