@@ -1,5 +1,5 @@
 #obfuscator
-import base64 ,os
+import base64 ,os ,nuitka
 
 def obfuscate(PATH):
     with open(PATH,"r",encoding="utf-8") as f:
@@ -15,5 +15,4 @@ def obfuscate(PATH):
 def compilefile(PATH):
     with open(PATH,"r",encoding="utf-8") as f:
         source = f.read()
-    code = compile(source,PATH,'exec')
-    return code
+    nuitka.compile(source,output_dir="output",standalone=True,remove_output_dir=True)
