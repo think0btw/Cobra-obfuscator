@@ -47,7 +47,7 @@ print(color(ascii_art))
 def clear():
     os.system("cls" if os.name == "nt" else "clear")
 
-
+clear()
 def write_loader(out_path, data):
     key = b"\x13\x37\x42\x20\x54"
     loader = f'''
