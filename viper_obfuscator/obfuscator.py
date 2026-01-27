@@ -1,23 +1,32 @@
-import base64 ,nuitka
+import base64
+import subprocess
+import os
 
 def obfuscate(PATH):
     with open(PATH, "r", encoding="utf-8") as f:
         source = f.read()
 
-    # base64
     encoded = base64.b64encode(source.encode("utf-8"))
 
-    # xor
     key = b"\x13\x37\x42\x20\x54"
-    xor = bytearray()
-
-    for i in range(len(encoded)):
-        xor.append(encoded[i] ^ key[i % len(key)])
-
+    xor = bytearray(encoded[i] ^ key[i % len(key)] for i in range(len(encoded)))
     return xor
 
+
 def compilefile(PATH):
-    with open(PATH, "r", encoding="utf-8") as f:
-        source = f.read()
-    output_path = PATH.replace(".py", "_compiled")
-    nuitka.compile(source, output_filename=output_path)
+    if not os.path.isfile(PATH):
+        print("File not found")
+        return
+
+    if not PATH.endswith(".py"):
+        print("Not a python file")
+        return
+
+    try:
+        subprocess.run(
+            ["python3", "-m", "nuitka", "--onefile", PATH],
+            check=True
+        )
+        print("[+] Compilation finished")
+    except subprocess.CalledProcessError:
+        print("Compilation failed")
