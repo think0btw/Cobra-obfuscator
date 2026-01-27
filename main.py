@@ -122,7 +122,7 @@ while True:
     elif cmd == "path":
         print(os.getcwd())
     elif cmd == "compile":
-        pathtocompile = input("Enter the file path to compile: ")
+        pathtocompile = input("Enter the file path to compile: ").strip().strip('"').strip("'")
         obfuscator.compilefile(pathtocompile)
     elif cmd == "exit":
         break
