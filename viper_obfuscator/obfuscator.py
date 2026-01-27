@@ -1,5 +1,4 @@
-#obfuscator
-import base64 ,os
+import base64 ,nuitka
 
 def obfuscate(PATH):
     with open(PATH, "r", encoding="utf-8") as f:
