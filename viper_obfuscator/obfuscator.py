@@ -7,7 +7,7 @@ def obfuscate(PATH):
         #base64
         encode =base64.b64encode(f.encode("utf-8"))
         #xor
-        key = os.urandom(16)
+        key = b"\x13\x37\x42\x20\x54"
         xor = bytearray()
         for i in range(len(encode)):
             xor.append(encode[i] ^ key[i % len(key)])
