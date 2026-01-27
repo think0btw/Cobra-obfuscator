@@ -1,7 +1,7 @@
 import os
+import base64
 from viper_obfuscator.ast import ObfuscationEngine
 from viper_obfuscator import obfuscator
-
 
 def color(text):
     result = ""
