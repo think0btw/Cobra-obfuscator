@@ -1,6 +1,7 @@
 import os
+from viper_obfuscator.ast import ObfuscationEngine
+from viper_obfuscator import obfuscator
 
-os.system("")
 
 def color(text):
     result = ""
@@ -19,7 +20,7 @@ def color(text):
                     up = True
 
             result += f"\033[38;2;{r};{g};{b}m{char}\033[0m"
-        result += "\n" 
+        result += "\n"
 
     return result
 
@@ -37,54 +38,80 @@ ascii_art = r"""
             ~ Nat11-n1                   ⡇⠀⠀⠳⡊⠐⢺⠄⣐⣋⣗⠉⠀⠀⠀⢀⣀⣀⡀⠀⡇⠀⠀⠱⡀
                                          ⠑⢄⠀⠀⠀⠀⠀⢣⠀⠈⢛⠣⢤⡖⠊⠉⠀⠀⣀⠠⠂⠀⠀⢰⠁
                                          ⠀⠀⠉⠒⠠⠤⠤⠖⠓⢄⡀⠁⠀⠀⠈⠉⠁⠀⠀⠀⠀⢀⡴⠃⠀
- use help for help                       ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠁⠒⠒⠀⠀⠀⠒⠒⠒⠉⠁⠀⠀⠀  """
+ use help for help                       ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠁⠒⠒⠀⠀⠀⠒⠒⠒⠉⠁⠀⠀⠀
+"""
 
 print(color(ascii_art))
 
 
 def clear():
-    os.system('cls' if os.name == 'nt' else 'clear')
-    
-    
+    os.system("cls" if os.name == "nt" else "clear")
+
+
+def ast_obfuscate_file(path):
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            source = f.read()
+
+        engine = ObfuscationEngine(strings=True, numbers=True, passes=2)
+        obfuscated_code = engine.obfuscate(source)
+
+        out_path = path.replace(".py", "_obf.py")
+
+        with open(out_path, "w", encoding="utf-8") as f:
+            f.write(obfuscated_code)
+
+        print(color(f"[+] Obfuscation finished → {out_path}"))
+
+    except Exception as e:
+        print(color(f"[ERROR] {e}"))
+
+
 def drag_file():
     path = input("Glisse un fichier ici : ").strip().strip('"').strip("'")
 
     if path.lower().endswith(".py") and os.path.isfile(path):
-        print("Path :", path)
+        print(color(f"[+] File loaded : {path}"))
+        ast_obfuscate_file(path)
     else:
-        print("Not a python file")
-    return
+        print(color("[-] Not a python file"))
 
-def mlanualpath():
-    path = input("Enter the file path : ")
+
+def manualpath():
+    path = input("Enter the file path : ").strip().strip('"').strip("'")
+
     if path.lower().endswith(".py") and os.path.isfile(path):
-        print("Path :", path)
+        print(color(f"[+] File loaded : {path}"))
+        ast_obfuscate_file(path)
     else:
-        print("Not a python file")
-    return
+        print(color("[-] Not a python file"))
 
-def help():
+
+def help_menu():
     print(color("""
-    help : show this help
-    drag : drag and drop a python file
-    clear : clear the screen
-    path : show the current path
-    manualpath : manually enter a file path
-    exit : exit the program
+    help        : show this help
+    drag        : drag and drop a python file (auto obfuscate)
+    manualpath  : manually enter a python file path
+    clear       : clear the screen
+    path        : show current directory
+    exit        : exit the program
     """))
 
 
 while True:
-    cmd =input(color("[>]  "))
-    if cmd =='drag':
+    cmd = input(color("[>] ")).strip().lower()
+
+    if cmd == "drag":
         drag_file()
-    if cmd =='help':
-        help()
-    if cmd =='clear':
+    elif cmd == "manualpath":
+        manualpath()
+    elif cmd == "help":
+        help_menu()
+    elif cmd == "clear":
         clear()
-    if cmd =='path':
+    elif cmd == "path":
         print(os.getcwd())
-    if cmd =='manualpath':
-        mlanualpath()
-    if cmd =='exit':
+    elif cmd == "exit":
         break
+    else:
+        print(color("Unknown command. Type help"))
