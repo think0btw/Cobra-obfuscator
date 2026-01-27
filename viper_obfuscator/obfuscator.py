@@ -19,5 +19,5 @@ def obfuscate(PATH):
 def compilefile(PATH):
     with open(PATH, "r", encoding="utf-8") as f:
         source = f.read()
-    code = compile(source,PATH,'exec')
-    return code
+    output_path = PATH.replace(".py", "_compiled")
+    nuitka.compile(source, output_filename=output_path)
