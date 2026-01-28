@@ -126,6 +126,12 @@ Glisse un fichier ici : /path/to/your/script.py
 │  • Execute code     │
 └─────────────────────┘
 ```
+## ⚠️ Important Notes
+
+- ✅ **Always backup** your original code before obfuscation
+- ⚠️ Obfuscated code may run **slightly slower** than original
+- 📁 Keep your **original source code** for future modifications
+- 🎯 This tool is for **legitimate protection** purposes only
 
 
 ## 📜 License & Ethics
@@ -135,3 +141,18 @@ intellectual property protection, software distribution,
 and educational purposes.
 
 It is not designed for malware development or malicious code concealment.
+
+## 👥 Authors
+
+- **think0btw**
+- **Nat11-n1**
+
+---
+
+## 🌟 Support
+
+If you find this project helpful, please give it a ⭐ on GitHub!
+
+---
+
+**Made with 🐍 and ❤️**
