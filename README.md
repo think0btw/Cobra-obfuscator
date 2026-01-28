@@ -22,6 +22,15 @@
 ## 📖 About
 Cobra-Obfuscator makes your Python code unreadable while keeping it functional. Perfect for protecting your intellectual property when distributing software.
 
+## Installation
+
+‘’’
+git clone https://github.com/think0btw/Cobra-obfuscator.git
+cd Cobra-obfuscator
+pip -r install requirements.txt
+python3 main.py
+‘’’
+
 
 ## 📜 License & Ethics
 
