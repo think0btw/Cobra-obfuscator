@@ -38,13 +38,10 @@ Cobra Obfuscator uses **AST (Abstract Syntax Tree) transformations** and **runti
   - Preserves Python built-ins
   - Handles imports correctly
   - Multi-pass obfuscation (up to 2 passes)
-  - Optimized for large files
 
 - **⚙️ Additional Tools**
   - Nuitka compilation support
-  - Interactive CLI interface
-  - Drag-and-drop file support
-
+    
 ---
 
 ## 🔧 Installation
