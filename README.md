@@ -20,14 +20,111 @@
 
 
 ## 📖 About
-Cobra-Obfuscator makes your Python code unreadable while keeping it functional. Perfect for protecting your intellectual property when distributing software.
 
-## Installation
+Cobra Obfuscator uses **AST (Abstract Syntax Tree) transformations** and **runtime encryption** to make your Python code extremely difficult to reverse engineer. It combines multiple obfuscation techniques to provide strong protection for your source code.
+
+---
+
+## ✨ Features
+
+- **🔐 Multi-Layer Obfuscation**
+  - AST-based code transformation
+  - Variable and function renaming
+  - String obfuscation
+  - Number obfuscation
+  - XOR encryption with Base64 encoding
+
+- **🎯 Smart Processing**
+  - Preserves Python built-ins
+  - Handles imports correctly
+  - Multi-pass obfuscation (up to 2 passes)
+  - Optimized for large files
+
+- **⚙️ Additional Tools**
+  - Nuitka compilation support
+  - Interactive CLI interface
+  - Drag-and-drop file support
+
+---
+
+## 🔧 Installation
+
 ```bash
+
 git clone https://github.com/think0btw/Cobra-obfuscator.git
 cd Cobra-obfuscator
-pip -r install requirements.txt
+pip install -r requirements.txt
 python3 main.py
+```
+
+---
+
+## 🚀 Usage
+
+### Interactive Mode
+
+Run the tool and use the interactive commands:
+
+```bash
+python3 main.py
+```
+
+### Available Commands
+
+| Command | Description |
+|---------|-------------|
+| `drag` | Drag and drop a Python file to obfuscate |
+| `manualpath` | Enter file path manually |
+| `compile` | Compile obfuscated file with Nuitka |
+| `path` | Show current working directory |
+| `clear` | Clear the screen |
+| `help` | Show help menu |
+| `exit` | Exit the program |
+
+### Example Workflow
+
+```bash
+[>] drag
+Glisse un fichier ici : /path/to/your/script.py
+[+] /path/to/your/script_packed.py
+```
+
+---
+
+## 📊 How It Works
+
+```
+┌─────────────────────┐
+│  Original Python    │
+│      Code          │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│   AST Transform     │
+│ • Rename variables  │
+│ • Rename functions  │
+│ • Split strings     │
+│ • Obfuscate numbers │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│  Base64 Encoding    │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│   XOR Encryption    │
+│   (with key)        │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│  Runtime Loader     │
+│  • Decrypt at run   │
+│  • Execute code     │
+└─────────────────────┘
 ```
 
 
