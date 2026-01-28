@@ -108,6 +108,7 @@ drag
 manualpath
 clear
 path
+compile
 exit
 """))
 
