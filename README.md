@@ -125,10 +125,10 @@ Glisse un fichier ici : /path/to/your/script.py
 ```
 ## ⚠️ Important Notes
 
-- ✅ **Always backup** your original code before obfuscation
-- ⚠️ Obfuscated code may run **slightly slower** than original
-- 📁 Keep your **original source code** for future modifications
-- 🎯 This tool is for **legitimate protection** purposes only
+- **Always backup** your original code before obfuscation
+-   Obfuscated code may run **slightly slower** than original
+-   Keep your **original source code** for future modifications
+-   This tool is for **legitimate protection** purposes only
 
 
 ## 📜 License & Ethics
