@@ -93,7 +93,7 @@ Glisse un fichier ici : /path/to/your/script.py
 ```
 ┌─────────────────────┐
 │  Original Python    │
-│      Code          │
+│      Code           │
 └──────────┬──────────┘
            │
            ▼
