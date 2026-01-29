@@ -220,8 +220,7 @@ class ObfuscationEngine:
             else:
                 passes = self.passes
                 strings = self.strings
-            
-            # Applique l'obfuscation
+
             obfuscator = MultiPassObfuscator(
                 strings=strings,
                 numbers=self.numbers,
